@@ -24,14 +24,14 @@ jQuery(function ($) {
                     click: function () {
                         const json = formBuilder.actions.getData('json')
 
-                        const container = document.getElementById('fb-rendered-form');
+                        const modal = document.getElementById('fb-rendered-form');
                         const formRenderOpts = {
-                            container,
+                            container: modal,
                             formData: json,
                             dataType: 'json'
                         };
 
-                        $(container).formRender(formRenderOpts);
+                        $(modal).formRender(formRenderOpts);
                         console.log(json)
                     }
                 }
